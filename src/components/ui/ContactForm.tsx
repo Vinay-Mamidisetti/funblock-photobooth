@@ -262,7 +262,7 @@ export default function ContactForm() {
                         name="hours"
                         type="number"
                         min="1"
-                        placeholder="Ex: 4"
+                        placeholder="Minimum 2hrs"
                         onChange={() => clearError("hours")}
                         className={`mt-1 h-10 w-full rounded-[1.5rem] border px-5 text-[var(--text)] outline-none transition bg-[var(--surface)]
                         ${errors.hours

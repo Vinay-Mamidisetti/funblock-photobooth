@@ -139,9 +139,8 @@ export default function Hero() {
                   sm:text-base
                 "
               >
-                Premium Photo Booth, Bubble Booth & 360 Booth rentals
-                for weddings, birthdays, corporate events, and unforgettable
-                celebrations.
+                Premium Photo Booth, Bubble Booth, DSLR Booth, Glam Booth & 360 Booth rentals
+                for weddings, birthdays, corporate events, grad Events and for any special occasions.
               </p>
 
               {/* Pricing */}
@@ -221,11 +220,11 @@ export default function Hero() {
                 "
               >
                 <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Perfect For
+                  Upgrades
                 </p>
 
                 <p className="mt-2 text-sm leading-6 text-[var(--text)]">
-                  Weddings, birthdays, parties, baby showers & corporate events.
+                  Unlimited Prints, Cloud Data, Scrap Book, VIP Carpet & Stanchions, Surrounding Lights.
                 </p>
               </div>
 

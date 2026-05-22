@@ -28,9 +28,9 @@ export default function PricingCard({ name, price, description, features, highli
           {highlight}
         </span>
       </div>
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <p className="text-4xl font-semibold text-[var(--text)]">{price}</p>
-      </div>
+      </div> */}
       <p className="mt-5 text-sm leading-7 text-[var(--muted)]">{description}</p>
       <ul className="mt-6 space-y-3 text-sm text-[var(--muted)]">
         {features.map((feature) => (

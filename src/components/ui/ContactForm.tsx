@@ -353,9 +353,9 @@ export default function ContactForm() {
             <div className="mt-4 text-sm text-[var(--muted)]">
                 <p className="mb-2">Prefer a faster reply? Reach us directly:</p>
                 <div className="flex flex-wrap gap-3">
-                    <a href={`tel:${site.phoneRaw}`} className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 text-white">Call</a>
-                    <a href={`${site.whatsappUrl}?text=${encodeURIComponent(quickMessage)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2">WhatsApp</a>
-                    <a href={`sms:${site.phoneRaw}?body=${encodeURIComponent(quickMessage)}`} className="inline-flex items-center gap-2 rounded-full bg-[#007aff] px-4 py-2 text-white">iMessage</a>
+                    <a href={`tel:${site.phoneRaw}`} className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 !text-white">Call</a>
+                    <a href={`${site.whatsappUrl}?text=${encodeURIComponent(quickMessage)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#25D366] border border-[var(--border)] px-4 py-2 !text-white">WhatsApp</a>
+                    <a href={`sms:${site.phoneRaw}?body=${encodeURIComponent(quickMessage)}`} className="inline-flex items-center gap-2 rounded-full bg-[#007aff] px-4 py-2 !text-white">iMessage</a>
                 </div>
             </div>
 

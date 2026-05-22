@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import { ExternalLink, Phone, MapPin } from "lucide-react";
+import { ExternalLink, Phone, MapPin, MessageCircle } from "lucide-react";
 import { site } from "@/constants/site";
 import { navLinks } from "@/constants/navigation";
 import { FaInstagram } from "react-icons/fa";
@@ -23,6 +23,10 @@ export default function Footer() {
               <a href={`tel:${site.phoneRaw}`} className="inline-flex items-center gap-2 text-[var(--text)] transition hover:text-[var(--accent)]">
                 <Phone className="h-4 w-4" />
                 {site.phoneDisplay}
+              </a>
+              <a href={`sms:${site.phoneRaw}`} className="inline-flex items-center gap-2 text-[var(--text)] transition hover:text-[var(--accent)]">
+                <MessageCircle className="h-4 w-4" />
+                <span>iMessage</span>
               </a>
               <a href={site.instagramUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[var(--text)] transition hover:text-[var(--accent)]">
                 <FaInstagram className="h-4 w-4" />

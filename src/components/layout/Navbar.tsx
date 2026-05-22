@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, type MouseEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { site } from "@/constants/site";
 const navLinks = [
@@ -113,6 +113,15 @@ const Navbar = () => {
                                <Phone className="h-4 w-4 text-white" />
                                <span className="text-white">Book Now</span>
                             </a>
+                            <a
+                                href={`sms:${site.phoneRaw}?body=${encodeURIComponent(
+                                    "Hi! I am interested in Funblock Photobooth services."
+                                )}`}
+                                className="px-4 py-2 rounded-full bg-[#007aff] text-sm font-medium text-white hover:bg-[#0066e6] transition-all duration-300 inline-flex items-center gap-2"
+                            >
+                                <MessageCircle className="h-4 w-4 text-white" />
+                                <span className="text-white hidden md:inline">iMessage</span>
+                            </a>
                         </div>
 
                         {/* Mobile Button */}
@@ -210,6 +219,14 @@ const Navbar = () => {
                                         className="flex items-center justify-center w-full rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-4 text-[var(--text)] font-medium hover:bg-[var(--background)] transition-all duration-300"
                                     >
                                         <span className="text-[var(--text)]">WhatsApp</span>
+                                    </a>
+                                    <a
+                                        href={`sms:${site.phoneRaw}?body=${encodeURIComponent(
+                                            "Hi! I am interested in Funblock Photobooth services."
+                                        )}`}
+                                        className="flex items-center justify-center w-full rounded-full border border-[var(--border)] bg-[#007aff] px-6 py-4 text-white font-medium hover:bg-[#0066e6] transition-all duration-300"
+                                    >
+                                        <span className="text-white">iMessage</span>
                                     </a>
                                 </div>
                             </div>

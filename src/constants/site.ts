@@ -6,4 +6,6 @@
   instagramUrl: "https://www.instagram.com/funblock_photobooth",
   address: "Milwaukee, WI | Serving Chicago & Dallas",
   whatsappUrl: "https://wa.me/13127712389",
+  // SMS / iMessage link (uses sms: scheme; iMessage will open on Apple devices)
+  smsUrl: "sms:+13127712389",
 };

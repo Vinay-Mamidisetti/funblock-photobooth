@@ -11,6 +11,8 @@ export default function FloatingActions() {
     message
   )}`;
 
+  const smsUrl = `sms:${site.phoneRaw}?body=${encodeURIComponent(message)}`;
+
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
       {/* WhatsApp */}
@@ -30,6 +32,23 @@ export default function FloatingActions() {
     "
       >
         <FaWhatsapp className="h-7 w-7 text-white" />
+      </a>
+
+      {/* iMessage / SMS */}
+      <a
+        href={smsUrl}
+        aria-label="Send iMessage"
+        className="
+          inline-flex h-12 w-12 items-center justify-center
+          rounded-full
+          bg-[#007aff]
+          shadow-[0_18px_40px_rgba(0,122,255,0.28)]
+          transition-all duration-300
+          hover:scale-110
+          hover:bg-[#0066e6]
+        "
+      >
+        <MessageCircle className="h-6 w-6 text-white" />
       </a>
 
       {/* Call */}

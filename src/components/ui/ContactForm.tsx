@@ -1,5 +1,6 @@
 ﻿"use client";
 import { useState } from "react";
+import { site } from "@/constants/site";
 type Errors = {
     name?: string;
     phone?: string;
@@ -111,6 +112,8 @@ export default function ContactForm() {
             setLoading(false);
         }
     };
+
+        const quickMessage = "Hi! I am interested in Funblock Photobooth services.";
 
     return (
         <form onSubmit={handleSubmit} noValidate className="space-y-2">
@@ -345,6 +348,16 @@ export default function ContactForm() {
                     Thank you! We’ll contact you shortly with pricing and availability.
                 </p>
             ) : null}
+
+            {/* Quick contact options */}
+            <div className="mt-4 text-sm text-[var(--muted)]">
+                <p className="mb-2">Prefer a faster reply? Reach us directly:</p>
+                <div className="flex flex-wrap gap-3">
+                    <a href={`tel:${site.phoneRaw}`} className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 text-white">Call</a>
+                    <a href={`${site.whatsappUrl}?text=${encodeURIComponent(quickMessage)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2">WhatsApp</a>
+                    <a href={`sms:${site.phoneRaw}?body=${encodeURIComponent(quickMessage)}`} className="inline-flex items-center gap-2 rounded-full bg-[#007aff] px-4 py-2 text-white">iMessage</a>
+                </div>
+            </div>
 
         </form>
     );

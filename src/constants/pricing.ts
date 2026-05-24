@@ -1,16 +1,44 @@
 ﻿export const pricingPlans = [
   {
     name: "Signature",
-    price: "$1,499",
-    description: "Curated premium photobooth coverage for weddings and private celebrations.",
-    features: ["2-hour rental", "Prints", "Professional attendant", "Props"],
-    highlight: "Best for intimate luxury events",
+
+    description:
+      "An elegant photobooth experience curated for weddings, birthdays, baby showers, and intimate celebrations.",
+
+    features: [
+      "2 Hour Booth Experience",
+      "Premium Photo Booth Setup",
+      "Professional Booth Attendant",
+      "Luxury Props & Accessories",
+      "Instant Digital Sharing",
+      "Elegant Guest Experience",
+    ],
+
+    highlight:
+      "Perfect for weddings, birthdays & private celebrations",
+
+    featured: false,
   },
+
   {
     name: "Executive",
-    price: "$3,499",
-    description: "Complete VIP activation with premium print and video options.",
-    features: ["6-hour event rental", "Custom backdrop", "Prints + digital gallery", "Professional attendant", "Props", "Prints"],
-    highlight: "Corporate events & For new Business Promotions",
+
+    description:
+      "A complete premium activation designed for luxury events, large celebrations, and corporate experiences.",
+
+    features: [
+      "360 Booth Experience",
+      "Custom Backdrop Setup",
+      "VIP Guest Experience",
+      "Corporate Branding Support",
+      "Instant QR & SMS Sharing",
+      "Professional Event Team",
+      "Luxury Visual Styling",
+    ],
+
+    highlight:
+      "Best for corporate events & premium luxury celebrations",
+
+    featured: true,
   },
 ];

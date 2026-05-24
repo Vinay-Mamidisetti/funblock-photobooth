@@ -146,7 +146,7 @@ export default function Hero() {
               {/* Pricing */}
               <div
                 className="
-                  mt-6
+                  mt-3
                   inline-flex items-center gap-2
                   rounded-full
                   border border-[rgba(198,161,110,0.22)]
@@ -167,7 +167,7 @@ export default function Hero() {
               {/* Buttons */}
               <div
                 className="
-                  mt-7
+                  mt-3
                   flex flex-col gap-3
                   sm:flex-row sm:items-center
                 "
@@ -206,7 +206,7 @@ export default function Hero() {
             {/* Quick Info */}
             <div
               className="
-                mt-8
+                mt-3
                 grid gap-4
                 sm:grid-cols-2
               "
@@ -253,15 +253,15 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="
-              h-full
-              overflow-hidden
-              rounded-[2rem]
-              border border-[var(--border)]
-              bg-[var(--surface)]
-              p-4
-              shadow-[0_30px_100px_-70px_rgba(58,45,36,0.18)]
-              flex flex-col
-            "
+    h-full
+    overflow-hidden
+    rounded-[2rem]
+    border border-[var(--border)]
+    bg-[var(--surface)]
+    p-4
+    shadow-[0_30px_100px_-70px_rgba(58,45,36,0.18)]
+    flex flex-col
+  "
           >
             {/* Carousel */}
             <div className="flex-1">
@@ -281,45 +281,43 @@ export default function Hero() {
                 {services.map((service) => (
                   <SwiperSlide key={service.title}>
                     <div
-                      className="
-                        overflow-hidden
-                        rounded-[1.7rem]
-                        border border-[var(--border)]
-                        bg-[var(--background)]
-                        shadow-[0_20px_60px_-40px_rgba(58,45,36,0.16)]
-                      "
+                      className="overflow-hidden
+                      rounded-[1.7rem]
+                      border border-[var(--border)]
+                      bg-[var(--background)]
+                      shadow-[0_20px_60px_-40px_rgba(58,45,36,0.16)]"
                     >
                       <div className="relative h-[220px] md:h-[250px] overflow-hidden">
                         <img
                           src={service.image}
                           alt={service.title}
                           className="
-                            h-full w-full
-                            object-cover
-                            transition duration-700
-                            hover:scale-105
-                          "
+                  h-full w-full
+                  object-cover
+                  transition duration-700
+                  hover:scale-105
+                "
                         />
 
                         <div className="absolute inset-0 bg-black/20" />
 
                         <div
                           className="
-                            absolute bottom-0 left-0 right-0
-                            bg-gradient-to-t
-                            from-black/80
-                            to-transparent
-                            p-4
-                            text-white
-                          "
+                  absolute bottom-0 left-0 right-0
+                  bg-gradient-to-t
+                  from-black/80
+                  to-transparent
+                  p-4
+                  text-white
+                "
                         >
                           <p
                             className="
-                              text-[10px]
-                              uppercase
-                              tracking-[0.25em]
-                              text-[#f5d28c]
-                            "
+                    text-[10px]
+                    uppercase
+                    tracking-[0.25em]
+                    text-[#f5d28c]
+                  "
                           >
                             Funblock Experience
                           </p>
@@ -342,65 +340,65 @@ export default function Hero() {
             {/* Bottom Featured Card */}
             <div
               className="
-                mt-3
-                overflow-hidden
-                rounded-[1.7rem]
-                border border-[var(--border)]
-                bg-[var(--background)]
-                shadow-[0_20px_60px_-40px_rgba(58,45,36,0.16)]
-              "
+      mt-2
+      overflow-hidden
+      rounded-[1.7rem]
+      border border-[var(--border)]
+      bg-[var(--background)]
+      shadow-[0_20px_60px_-40px_rgba(58,45,36,0.16)]
+    "
             >
               <div className="relative h-[220px] md:h-[250px] overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop"
                   alt="Funblock Photobooth"
                   className="
-                    h-full w-full
-                    object-cover
-                  "
+          h-full w-full
+          object-cover
+        "
                 />
 
                 <div className="absolute inset-0 bg-black/20" />
 
                 <div
                   className="
-                    absolute bottom-0 left-0 right-0
-                    bg-gradient-to-t
-                    from-black/80
-                    to-transparent
-                    p-4
-                    text-white
-                  "
+          absolute bottom-0 left-0 right-0
+          bg-gradient-to-t
+          from-black/80
+          to-transparent
+          p-4
+          text-white
+        "
                 >
                   <p
                     className="
-                      text-[10px]
-                      uppercase
-                      tracking-[0.25em]
-                      text-[#f5d28c]
-                    "
+            text-[10px]
+            uppercase
+            tracking-[0.25em]
+            text-[#f5d28c]
+          "
                   >
                     Featured Experience
                   </p>
 
                   <h2
                     className="
-                      mt-2
-                      text-xl
-                      font-semibold
-                      leading-tight
-                    "
+            mt-2
+            text-xl
+            font-semibold
+            leading-tight
+          "
                   >
                     Luxury Event Activations
                   </h2>
 
                   <p
                     className="
-                      mt-2
-                      text-sm
-                      leading-5
-                      text-white/85
-                    "
+            mt-2
+            text-sm
+            leading-5
+            text-white/85
+          "
                   >
                     Premium cinematic booth experiences designed for unforgettable celebrations.
                   </p>

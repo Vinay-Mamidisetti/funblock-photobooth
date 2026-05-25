@@ -14,7 +14,7 @@ export default function NotFoundPage() {
         <p className="text-base uppercase tracking-[0.32em] text-[var(--accent)] mb-6">
           404 — Page Not Found
         </p>
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-[var(--text)] mb-6">
+        <h1 className="font-heading text-4xl md:text-5xl font-semibold tracking-tight text-[var(--text)] mb-6">
           We couldn’t find the page you were looking for.
         </h1>
         <p className="mx-auto max-w-2xl text-sm md:text-base leading-7 text-[var(--text)]/80 mb-10">

@@ -72,7 +72,7 @@ export default function GalleryCard({
             {subtitle}
           </p>
 
-          <h3 className="mt-2 text-lg font-semibold">
+          <h3 className="font-heading mt-2 text-lg font-semibold">
             {title}
           </h3>
         </div>

@@ -55,6 +55,7 @@ export default function HowItWorks() {
 
           <h2
             className="
+              font-heading
               mt-4
               text-4xl font-semibold
               tracking-tight

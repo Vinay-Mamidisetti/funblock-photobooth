@@ -114,6 +114,7 @@ export default function Hero() {
               {/* Heading */}
               <h1
                 className="
+                  font-heading
                   mt-3
                   max-w-2xl
                   text-3xl

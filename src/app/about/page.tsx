@@ -45,7 +45,7 @@ export default function AboutPage() {
             {/* Left */}
             <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] px-8 py-4 shadow-[0_30px_90px_-70px_rgba(58,45,36,0.18)]">
 
-              <h2 className="text-3xl font-semibold leading-tight text-[var(--text)]">
+              <h2 className="font-heading text-3xl font-semibold leading-tight text-[var(--text)]">
                 More than a photobooth.
               </h2>
 

@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">
               Elegant event imaging
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
               Funblock Photobooth
             </h2>
             <p className="max-w-xl text-sm leading-7 text-[var(--muted)]">

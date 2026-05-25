@@ -18,7 +18,7 @@ export default function SectionHeading({
       <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">
         {eyebrow}
       </p>
-      <h2 className="mt-2 max-w-3xl text-3xl font-semibold leading-tight text-[var(--text)] sm:text-4xl lg:text-5xl">
+      <h2 className="font-heading mt-2 max-w-3xl text-3xl font-semibold leading-tight text-[var(--text)] sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (

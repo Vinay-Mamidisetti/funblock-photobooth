@@ -6,6 +6,7 @@ import Gallery from "@/sections/Gallery";
 import Testimonials from "@/sections/Testimonials";
 import Pricing from "@/sections/Pricing";
 import Contact from "@/sections/Contact";
+import HowItWorks from "@/sections/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Luxury Editorial Photo Booth Experiences | Funblock Photobooth",
@@ -31,6 +32,7 @@ export default function HomePage() {
     <main className="overflow-hidden">
       <Hero />
       <Services />
+      <HowItWorks />
       <VideoCarouselSection />
       <Gallery />
       <Testimonials />

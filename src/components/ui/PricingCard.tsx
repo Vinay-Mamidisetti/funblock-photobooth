@@ -31,12 +31,11 @@ export default function PricingCard() {
         rounded-[2.2rem]
         border border-[rgba(198,161,110,0.28)]
         bg-[rgba(198,161,110,0.06)]
-        px-8 py-8
+        px-10 py-5
         shadow-[0_40px_120px_-60px_rgba(198,161,110,0.28)]
       "
     >
 
-      {/* Glow */}
       <div
         className="
           absolute inset-0
@@ -83,7 +82,7 @@ export default function PricingCard() {
         <h3
           className="
             font-heading
-            mt-1 text-4xl
+            mt-2 text-4xl
             font-semibold leading-tight
             text-[var(--text)]
           "
@@ -93,7 +92,7 @@ export default function PricingCard() {
 
         <p
           className="
-            mt-1 max-w-3xl
+            mt-2 max-w-3xl
             text-[15px] leading-8
             text-[var(--muted)]
           "
@@ -104,7 +103,7 @@ export default function PricingCard() {
         </p>
 
         {/* Main Grid */}
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="mt-2 grid gap-8 lg:grid-cols-2">
 
           {/* Booth Types */}
           <div
@@ -112,23 +111,21 @@ export default function PricingCard() {
               rounded-[1.8rem]
               border border-[var(--border)]
               bg-[var(--surface)]
-              px-6 py-4
+              px-6 py-3
             "
           >
 
-            <div className="flex items-center justify-between">
-              <h4
-                className="
-                  font-heading
-                  text-xl font-semibold
-                  text-[var(--text)]
-                "
-              >
-                Booth Experiences
-              </h4>
-            </div>
+            <h4
+              className="
+                font-heading
+                text-xl font-semibold
+                text-[var(--text)]
+              "
+            >
+              Booth Experiences
+            </h4>
 
-            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
 
               {boothTypes.map((item) => (
                 <li
@@ -170,11 +167,12 @@ export default function PricingCard() {
               rounded-[1.8rem]
               border border-[var(--border)]
               bg-[var(--surface)]
-              px-6 py-4
+              px-6 py-5
             "
           >
 
             <div className="flex items-center justify-between">
+
               <h4
                 className="
                   font-heading
@@ -197,9 +195,10 @@ export default function PricingCard() {
               >
                 Included
               </div>
+
             </div>
 
-            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
 
               {addons.map((item) => (
                 <li

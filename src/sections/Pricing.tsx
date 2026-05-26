@@ -1,6 +1,5 @@
 ﻿import SectionHeading from "@/components/common/SectionHeading";
 import PricingCard from "@/components/ui/PricingCard";
-import { pricingPlans } from "@/constants/pricing";
 
 type PricingProps = {
   showHeading?: boolean;
@@ -24,27 +23,14 @@ export default function Pricing({
 
         {showHeading && (
           <SectionHeading
-            eyebrow="Packages"
+            eyebrow="Experiences"
             title="Luxury booth experiences curated for unforgettable events"
-            description="Premium photobooth experiences designed for weddings, corporate celebrations, birthdays, and private luxury events."
+            description="Premium photobooth activations designed for weddings, corporate events, birthdays, luxury parties, and private celebrations."
           />
         )}
 
-        <div
-          className="
-            mt-8
-            grid gap-6
-            md:grid-cols-2
-            max-w-5xl
-            mx-auto
-          "
-        >
-          {pricingPlans.map((plan) => (
-            <PricingCard
-              key={plan.name}
-              {...plan}
-            />
-          ))}
+        <div className="mt-8 max-w-[1400px] mx-auto">
+          <PricingCard />
         </div>
 
       </div>

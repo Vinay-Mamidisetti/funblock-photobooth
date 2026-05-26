@@ -1,44 +1,108 @@
-﻿export const pricingPlans = [
-  {
-    name: "Signature",
+﻿// // pricing.ts
 
-    description:
-      "An elegant photobooth experience curated for weddings, birthdays, baby showers, and intimate celebrations.",
+// export const pricingPlans = [
+//   {
+//     name: "Premium Photo Booth",
 
-    features: [
-      "2 Hour Booth Experience",
-      "Premium Photo Booth Setup",
-      "Professional Booth Attendant",
-      "Luxury Props & Accessories",
-      "Instant Digital Sharing",
-      "Elegant Guest Experience",
-    ],
+//     description:
+//       "A refined luxury booth experience designed for weddings, birthdays, and premium celebrations.",
 
-    highlight:
-      "Perfect for weddings, birthdays & private celebrations",
+//     features: [
+//       "DSLR Camera Quality",
+//       "Instant Digital Sharing",
+//       "Professional Booth Attendant",
+//       "Luxury Props & Styling",
+//       "Custom Overlay Design",
+//       "Premium Guest Experience",
+//     ],
 
-    featured: false,
-  },
+//     highlight:
+//       "Perfect for weddings, birthdays & luxury private events",
 
-  {
-    name: "Executive",
+//     featured: false,
+//   },
 
-    description:
-      "A complete premium activation designed for luxury events, large celebrations, and corporate experiences.",
+//   {
+//     name: "Bubble Booth",
 
-    features: [
-      "360 Booth Experience",
-      "Custom Backdrop Setup",
-      "VIP Guest Experience",
-      "Corporate Branding Support",
-      "Instant QR & SMS Sharing",
-      "Professional Event Team",
-      "Luxury Visual Styling",
-    ],
+//     description:
+//       "An immersive modern booth setup with elegant styling and engaging guest interaction.",
 
-    highlight:
-      "Best for corporate events & premium luxury celebrations",
+//     features: [
+//       "Interactive Booth Experience",
+//       "Modern Luxury Setup",
+//       "Instant Sharing",
+//       "Premium Lighting",
+//       "Professional Event Support",
+//       "Elegant Guest Experience",
+//     ],
 
-    featured: true,
-  },
-];
+//     highlight:
+//       "Best for luxury celebrations & modern parties",
+
+//     featured: false,
+//   },
+
+//   {
+//     name: "DSLR Booth",
+
+//     description:
+//       "Premium DSLR-powered booth setup delivering high-quality portraits and editorial-style captures.",
+
+//     features: [
+//       "Professional DSLR Camera",
+//       "Studio Lighting Setup",
+//       "Luxury Photo Experience",
+//       "Instant Digital Gallery",
+//       "Professional Attendant",
+//       "Premium Event Styling",
+//     ],
+
+//     highlight:
+//       "Ideal for elegant weddings & branded events",
+
+//     featured: false,
+//   },
+
+//   {
+//     name: "Glam Booth",
+
+//     description:
+//       "A luxury glam-style booth experience with flawless lighting and premium beauty-inspired effects.",
+
+//     features: [
+//       "Skin Smoothing Effect",
+//       "Luxury Glam Filters",
+//       "Studio Quality Lighting",
+//       "Modern White Glam Look",
+//       "Instant Sharing",
+//       "Elegant Visual Experience",
+//     ],
+
+//     highlight:
+//       "Perfect for celebrity-style luxury experiences",
+
+//     featured: false,
+//   },
+
+//   {
+//     name: "360 Booth",
+
+//     description:
+//       "A cinematic 360 video experience designed to create immersive and viral event moments.",
+
+//     features: [
+//       "360 Slow Motion Videos",
+//       "Luxury Platform Setup",
+//       "Instant QR Sharing",
+//       "Professional Event Team",
+//       "Custom Branding Support",
+//       "Premium Guest Experience",
+//     ],
+
+//     highlight:
+//       "Best for corporate activations & luxury celebrations",
+
+//     featured: true,
+//   },
+// ];

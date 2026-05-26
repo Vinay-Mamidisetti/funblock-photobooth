@@ -84,6 +84,8 @@ export default function Gallery({
             freeMode={true}
             grabCursor={false}
             allowTouchMove={false}
+            simulateTouch={false}
+            touchStartPreventDefault={false}
             speed={2500}
             autoplay={{
               delay: 0,

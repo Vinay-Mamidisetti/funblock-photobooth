@@ -22,11 +22,22 @@ export default function Contact({
       <div className="mx-auto max-w-7xl">
 
         {showHeading && (
-          <SectionHeading
-            eyebrow="Contact"
-            title="Submit your event inquiry"
-            description="Ready to book or want a custom quote? Share the event details and we’ll respond with a tailored proposal."
-          />
+          <>
+            <SectionHeading
+              eyebrow="Contact"
+              title="Submit your event inquiry"
+              description="Ready to book or want a custom quote? Share the event details and we’ll respond with a tailored proposal."
+            />
+
+            <div className="mt-3 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-5 shadow-[0_20px_55px_-40px_rgba(58,45,36,0.10)]">
+              <p className="text-sm uppercase tracking-[0.35em] text-[var(--accent)]">
+                Collaborations
+              </p>
+              <p className=" text-base leading-7 text-[var(--text)]">
+                Are you a brand partner, event producer, or creative collaborator? DM us to explore premium photobooth activations, co-branded experiences, and luxury event partnerships.
+              </p>
+            </div>
+          </>
         )}
 
         <div

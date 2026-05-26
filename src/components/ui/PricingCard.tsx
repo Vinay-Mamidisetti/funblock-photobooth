@@ -2,65 +2,53 @@
 
 import { motion } from "framer-motion";
 
-type PricingCardProps = {
-  name: string;
-  description: string;
-  features: string[];
-  highlight: string;
-  featured?: boolean;
-};
+const boothTypes = [
+  "Premium Photo Booth",
+  "Bubble Booth",
+  "DSLR Booth",
+  "Glam Booth",
+  "360 Booth",
+];
 
-export default function PricingCard({
-  name,
-  description,
-  features,
-  highlight,
-  featured,
-}: PricingCardProps) {
+const addons = [
+  "Backdrops",
+  "Guest Book Station",
+  "VIP Carpet & Stanchions",
+  "Custom Print Design",
+  "Luxury Props",
+  "Experienced Coordinator",
+];
+
+export default function PricingCard() {
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      whileHover={{ y: -4 }}
-      className={`
+      className="
         relative overflow-hidden
-        rounded-[2rem]
-        border
-        px-8
-        py-6
-        transition-all duration-300
-        ${featured
-          ? `
-              border-[rgba(198,161,110,0.4)]
-              bg-[rgba(198,161,110,0.08)]
-              shadow-[0_40px_120px_-60px_rgba(198,161,110,0.28)]
-              lg:scale-[1.03]
-            `
-          : `
-              border-[var(--border)]
-              bg-[var(--surface)]
-              shadow-[0_30px_90px_-50px_rgba(58,45,36,0.12)]
-            `
-        }
-      `}
+        rounded-[2.2rem]
+        border border-[rgba(198,161,110,0.28)]
+        bg-[rgba(198,161,110,0.06)]
+        px-8 py-8
+        shadow-[0_40px_120px_-60px_rgba(198,161,110,0.28)]
+      "
     >
+
       {/* Glow */}
-      {featured && (
-        <div
-          className="
-            absolute inset-0
-            bg-[radial-gradient(circle_at_top,rgba(198,161,110,0.18),transparent_40%)]
-            pointer-events-none
-          "
-        />
-      )}
+      <div
+        className="
+          absolute inset-0
+          bg-[radial-gradient(circle_at_top,rgba(198,161,110,0.14),transparent_40%)]
+          pointer-events-none
+        "
+      />
 
       <div className="relative z-10">
 
         {/* Top */}
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-3">
 
           <span
             className="
@@ -72,99 +60,185 @@ export default function PricingCard({
               text-[var(--accent)]
             "
           >
-            {name}
+            Executive Experience
           </span>
 
-          {featured && (
-            <span
-              className="
-                rounded-full
-                border border-[rgba(198,161,110,0.3)]
-                bg-[rgba(198,161,110,0.08)]
-                px-3 py-1
-                text-[10px]
-                uppercase tracking-[0.24em]
-                text-[var(--accent)]
-              "
-            >
-              Most Popular
-            </span>
-          )}
-        </div>
-
-        {/* Experience Badge */}
-        <div
-          className="
-            mt-3 inline-flex
-            rounded-full
-            border border-[rgba(198,161,110,0.25)]
-            bg-[rgba(198,161,110,0.08)]
-            px-4 py-2
-            text-xs uppercase
-            tracking-[0.24em]
-            text-[var(--accent)]
-          "
-        >
-          Luxury Experience
-        </div>
-
-        {/* Description */}
-        <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-          {description}
-        </p>
-
-        {/* Features */}
-        <ul className="
-    mt-4
-    grid gap-4
-    text-sm text-[var(--muted)]
-    sm:grid-cols-2
-  ">
-          {features.map((feature) => (
-            <li
-              key={feature}
-              className="flex items-start gap-3"
-            >
-              <span
-                className="
-                  mt-1.5 h-2.5 w-2.5
-                  rounded-full
-                  bg-[var(--accent)]
-                "
-              />
-
-              <span className="leading-6">
-                {feature}
-              </span>
-            </li>
-          ))}
-        </ul>
-
-        {/* Bottom Highlight */}
-        <div
-          className="
-            mt-4 rounded-[1.4rem]
-            border border-[var(--border)]
-            bg-[var(--background)]/70
-            p-4
-          "
-        >
-          <p
+          <span
             className="
-              text-xs uppercase
-              tracking-[0.24em]
+              rounded-full
+              border border-[rgba(198,161,110,0.3)]
+              bg-[rgba(198,161,110,0.08)]
+              px-3 py-1
+              text-[10px]
+              uppercase tracking-[0.24em]
               text-[var(--accent)]
             "
           >
-            Best For
-          </p>
+            Most Popular
+          </span>
 
-          <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-            {highlight}
-          </p>
+        </div>
+
+        {/* Heading */}
+        <h3
+          className="
+            font-heading
+            mt-1 text-4xl
+            font-semibold leading-tight
+            text-[var(--text)]
+          "
+        >
+          Everything you need for a luxury guest experience.
+        </h3>
+
+        <p
+          className="
+            mt-1 max-w-3xl
+            text-[15px] leading-8
+            text-[var(--muted)]
+          "
+        >
+          Premium booth experiences designed for weddings,
+          birthdays, corporate activations, and unforgettable
+          luxury celebrations.
+        </p>
+
+        {/* Main Grid */}
+        <div className="grid gap-8 lg:grid-cols-2">
+
+          {/* Booth Types */}
+          <div
+            className="
+              rounded-[1.8rem]
+              border border-[var(--border)]
+              bg-[var(--surface)]
+              px-6 py-4
+            "
+          >
+
+            <div className="flex items-center justify-between">
+              <h4
+                className="
+                  font-heading
+                  text-xl font-semibold
+                  text-[var(--text)]
+                "
+              >
+                Booth Experiences
+              </h4>
+            </div>
+
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+
+              {boothTypes.map((item) => (
+                <li
+                  key={item}
+                  className="
+                    flex items-center gap-3
+                    rounded-[1rem]
+                    border border-[var(--border)]
+                    bg-[var(--background)]
+                    px-4 py-3
+                  "
+                >
+                  <span
+                    className="
+                      h-2.5 w-2.5
+                      rounded-full
+                      bg-[var(--accent)]
+                    "
+                  />
+
+                  <span
+                    className="
+                      text-sm font-medium
+                      text-[var(--text)]
+                    "
+                  >
+                    {item}
+                  </span>
+                </li>
+              ))}
+
+            </ul>
+
+          </div>
+
+          {/* Addons */}
+          <div
+            className="
+              rounded-[1.8rem]
+              border border-[var(--border)]
+              bg-[var(--surface)]
+              px-6 py-4
+            "
+          >
+
+            <div className="flex items-center justify-between">
+              <h4
+                className="
+                  font-heading
+                  text-xl font-semibold
+                  text-[var(--text)]
+                "
+              >
+                It Also Includes
+              </h4>
+
+              <div
+                className="
+                  rounded-full
+                  bg-[rgba(198,161,110,0.1)]
+                  px-3 py-1
+                  text-xs uppercase
+                  tracking-[0.24em]
+                  text-[var(--accent)]
+                "
+              >
+                Included
+              </div>
+            </div>
+
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+
+              {addons.map((item) => (
+                <li
+                  key={item}
+                  className="
+                    flex items-center gap-3
+                    rounded-[1rem]
+                    border border-[var(--border)]
+                    bg-[var(--background)]
+                    px-4 py-3
+                  "
+                >
+                  <span
+                    className="
+                      h-2.5 w-2.5
+                      rounded-full
+                      bg-[var(--accent)]
+                    "
+                  />
+
+                  <span
+                    className="
+                      text-sm font-medium
+                      text-[var(--text)]
+                    "
+                  >
+                    {item}
+                  </span>
+                </li>
+              ))}
+
+            </ul>
+
+          </div>
+
         </div>
 
       </div>
+
     </motion.article>
   );
 }

@@ -15,24 +15,6 @@ export default function FloatingActions() {
 
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
-      {/* WhatsApp */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Open WhatsApp"
-        className="
-          inline-flex h-12 w-12 items-center justify-center
-      rounded-full
-      bg-[#25D366]
-      shadow-[0_18px_40px_rgba(37,211,102,0.35)]
-      transition-all duration-300
-      hover:scale-110
-      hover:bg-[#1ebe5d]
-    "
-      >
-        <FaWhatsapp className="h-7 w-7 text-white" />
-      </a>
 
       {/* iMessage / SMS */}
       <a

@@ -1,11 +1,5 @@
-﻿import Pricing from "@/sections/Pricing";
-import type { Metadata } from "next";
+﻿import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Pricing | Funblock Photobooth",
-  description: "Premium photobooth pricing and luxury event experiences.",
-};
-
-export default function PricingPage() {
-  return <Pricing />;
+export default function PricingRedirectPage() {
+  redirect("/experiences");
 }

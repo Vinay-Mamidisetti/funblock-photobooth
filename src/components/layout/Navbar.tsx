@@ -6,14 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { site } from "@/constants/site";
-const navLinks = [
-    { label: "Home", href: "/#home" },
-    { label: "Services", href: "/services" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-];
+import { navLinks } from "@/constants/navigation";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +87,7 @@ const Navbar = () => {
                                 <Link
                                     key={item.label}
                                     href={item.href}
-                                    onClick={item.href === "/#home" ? handleHomeClick : undefined}
+                                    onClick={item.href === "/" ? handleHomeClick : undefined}
                                     className="relative text-sm text-[var(--text)]/80 hover:text-[var(--accent)] transition-colors duration-300 group"
                                 >
                                     {item.label}

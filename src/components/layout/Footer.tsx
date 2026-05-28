@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import { ExternalLink, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Phone, MapPin, MessageCircle } from "lucide-react";
 import { site } from "@/constants/site";
 import { navLinks } from "@/constants/navigation";
 import { FaInstagram } from "react-icons/fa";

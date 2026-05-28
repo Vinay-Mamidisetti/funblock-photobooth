@@ -1,10 +1,10 @@
 ﻿"use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Star } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -144,7 +144,7 @@ export default function Hero() {
                 for weddings, birthdays, corporate events, grad Events and for any special occasions.
               </p>
 
-              {/* Pricing */}
+              {/* Experiences */}
               <div
                 className="
                   mt-3
@@ -289,11 +289,12 @@ export default function Hero() {
                       shadow-[0_20px_60px_-40px_rgba(58,45,36,0.16)]"
                     >
                       <div className="relative h-[220px] md:h-[250px] overflow-hidden">
-                        <img
+                        <Image
                           src={service.image}
                           alt={service.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           className="
-                  h-full w-full
                   object-cover
                   transition duration-700
                   hover:scale-105
@@ -350,11 +351,12 @@ export default function Hero() {
     "
             >
               <div className="relative h-[220px] md:h-[250px] overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop"
                   alt="Funblock Photobooth"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="
-          h-full w-full
           object-cover
         "
                 />

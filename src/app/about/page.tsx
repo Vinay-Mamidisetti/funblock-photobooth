@@ -1,5 +1,6 @@
 ﻿import SectionHeading from "@/components/common/SectionHeading";
 import Testimonials from "@/sections/Testimonials";
+import Image from "next/image";
 
 export const metadata = {
   title: "About | Funblock Photobooth",
@@ -101,13 +102,15 @@ export default function AboutPage() {
 
             {/* Right */}
             <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] shadow-[0_30px_90px_-70px_rgba(58,45,36,0.18)]">
-
-              <img
-                src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1400&auto=format&fit=crop"
-                alt="Luxury Event"
-                className="h-full w-full object-cover"
-              />
-
+              <div className="relative h-full min-h-[420px] w-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1400&auto=format&fit=crop"
+                  alt="Luxury Event"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
 
           </div>

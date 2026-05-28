@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Funblock Photobooth
 
-## Getting Started
+Marketing website for Funblock Photobooth built with Next.js App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion + Swiper
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint checks
 
-## Learn More
+## Key Routes
 
-To learn more about Next.js, take a look at the following resources:
+- `/` - Main landing page
+- `/services` - Service overview
+- `/gallery` - Event gallery
+- `/experiences` - Booth experiences and offers
+- `/about` - About page
+- `/contact` - Inquiry page
+- `/chicago-photo-booth` - City landing page
+- `/dallas-photo-booth` - City landing page
+- `/wisconsin-photo-booth` - City landing page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app` - App Router pages and route metadata
+- `src/sections` - Reusable landing page sections
+- `src/components` - UI, layout, and template components
+- `src/constants` - Shared content and navigation data
+- `src/lib` - Shared helper modules
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Navigation links are centralized in `src/constants/navigation.ts`.
+- Shared landing composition is in `src/components/templates/LandingPageTemplate.tsx`.
+- The old `/pricing` route now redirects to `/experiences`.

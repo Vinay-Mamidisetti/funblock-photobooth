@@ -2,14 +2,9 @@
 
 import { Phone, MessageCircle } from "lucide-react";
 import { site } from "@/constants/site";
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingActions() {
   const message = "Hi! I am interested in Funblock Photobooth services.";
-
-  const whatsappUrl = `${site.whatsappUrl}?text=${encodeURIComponent(
-    message
-  )}`;
 
   const smsUrl = `sms:${site.phoneRaw}?body=${encodeURIComponent(message)}`;
 

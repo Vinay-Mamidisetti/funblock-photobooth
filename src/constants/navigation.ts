@@ -2,7 +2,7 @@
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Experiences", href: "/experiences" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

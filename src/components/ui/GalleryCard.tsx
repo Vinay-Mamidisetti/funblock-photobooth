@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type GalleryCardProps = {
   image: string;
@@ -29,11 +30,12 @@ export default function GalleryCard({
     >
       <div className="relative h-[320px] overflow-hidden">
 
-        <img
+        <Image
           src={image}
           alt={title}
+          fill
+          sizes="(max-width: 640px) 240px, (max-width: 1024px) 260px, 280px"
           className="
-            h-full w-full
             object-cover
             transition duration-700
             group-hover:scale-105

@@ -1,6 +1,4 @@
-﻿import type { ReactNode } from "react";
-
-type SectionHeadingProps = {
+﻿type SectionHeadingProps = {
   eyebrow: string;
   title: string;
   description?: string;

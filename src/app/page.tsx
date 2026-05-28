@@ -1,12 +1,5 @@
 ﻿import type { Metadata } from "next";
-import Hero from "@/sections/Hero";
-import Services from "@/sections/Services";
-import VideoCarouselSection from "@/sections/VideoCarouselSection";
-import Gallery from "@/sections/Gallery";
-import Testimonials from "@/sections/Testimonials";
-import Pricing from "@/sections/Pricing";
-import Contact from "@/sections/Contact";
-import HowItWorks from "@/sections/HowItWorks";
+import LandingPageTemplate from "@/components/templates/LandingPageTemplate";
 
 export const metadata: Metadata = {
   title: "Luxury Editorial Photo Booth Experiences | Funblock Photobooth",
@@ -28,16 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return (
-    <main className="overflow-hidden">
-      <Hero />
-      <Services />
-      <HowItWorks />
-      <VideoCarouselSection />
-      <Gallery />
-      <Testimonials />
-      <Pricing />
-      <Contact />
-    </main>
-  );
+  return <LandingPageTemplate showHowItWorks />;
 }

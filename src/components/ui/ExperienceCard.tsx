@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -19,7 +19,7 @@ const addons = [
   "Experienced Coordinator",
 ];
 
-export default function PricingCard() {
+export default function ExperienceCard() {
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -35,7 +35,6 @@ export default function PricingCard() {
         shadow-[0_40px_120px_-60px_rgba(198,161,110,0.28)]
       "
     >
-
       <div
         className="
           absolute inset-0
@@ -45,10 +44,8 @@ export default function PricingCard() {
       />
 
       <div className="relative z-10">
-
         {/* Top */}
         <div className="flex flex-wrap items-center gap-3">
-
           <span
             className="
               inline-flex rounded-full
@@ -75,7 +72,6 @@ export default function PricingCard() {
           >
             Most Popular
           </span>
-
         </div>
 
         {/* Heading */}
@@ -104,7 +100,6 @@ export default function PricingCard() {
 
         {/* Main Grid */}
         <div className="mt-2 grid gap-8 lg:grid-cols-2">
-
           {/* Booth Types */}
           <div
             className="
@@ -114,7 +109,6 @@ export default function PricingCard() {
               px-6 py-3
             "
           >
-
             <h4
               className="
                 font-heading
@@ -126,7 +120,6 @@ export default function PricingCard() {
             </h4>
 
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-
               {boothTypes.map((item) => (
                 <li
                   key={item}
@@ -156,9 +149,7 @@ export default function PricingCard() {
                   </span>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* Addons */}
@@ -170,9 +161,7 @@ export default function PricingCard() {
               px-6 py-5
             "
           >
-
             <div className="flex items-center justify-between">
-
               <h4
                 className="
                   font-heading
@@ -195,11 +184,9 @@ export default function PricingCard() {
               >
                 Included
               </div>
-
             </div>
 
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-
               {addons.map((item) => (
                 <li
                   key={item}
@@ -229,15 +216,10 @@ export default function PricingCard() {
                   </span>
                 </li>
               ))}
-
             </ul>
-
           </div>
-
         </div>
-
       </div>
-
     </motion.article>
   );
 }

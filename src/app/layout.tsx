@@ -17,8 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={playfair.variable}>
-      <body className="bg-[var(--background)] text-[var(--text)]">
+    <html lang="en" className={playfair.variable} suppressHydrationWarning>
+      <body
+        className="bg-[var(--background)] text-[var(--text)]"
+        suppressHydrationWarning
+      >
         <Navbar />
         <FloatingActions />
         <main className="pt-[80px]">{children}</main>

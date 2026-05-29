@@ -78,7 +78,7 @@ export default function Hero() {
         >
           {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="
@@ -250,7 +250,7 @@ export default function Hero() {
 
           {/* RIGHT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="

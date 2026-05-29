@@ -1,4 +1,4 @@
-﻿import SectionHeading from "@/components/common/SectionHeading";
+import SectionHeading from "@/components/common/SectionHeading";
 import Testimonials from "@/sections/Testimonials";
 import Image from "next/image";
 
@@ -28,7 +28,7 @@ const highlights = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-[var(--background)] text-[var(--text)]">
+    <div className="bg-[var(--background)] text-[var(--text)]">
 
       {/* Hero */}
       <section className="px-4 pt-10 pb-16 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
                 <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--background)] p-5 text-center">
                   <p className="text-3xl font-semibold text-[var(--accent)]">
-                    100+
+                    3000+
                   </p>
 
                   <p className="mt-2 text-sm text-[var(--muted)]">
@@ -221,6 +221,6 @@ export default function AboutPage() {
       {/* Testimonials */}
       <Testimonials showHeading={false} />
 
-    </main>
+    </div>
   );
 }

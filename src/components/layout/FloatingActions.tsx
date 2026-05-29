@@ -2,6 +2,7 @@
 
 import { Phone, MessageCircle } from "lucide-react";
 import { site } from "@/constants/site";
+import { FaInstagram } from "react-icons/fa";
 
 export default function FloatingActions() {
   const message = "Hi! I am interested in Funblock Photobooth services.";
@@ -11,7 +12,25 @@ export default function FloatingActions() {
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
 
-      {/* iMessage / SMS */}
+      <a
+        href={site.instagramUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        className="
+      inline-flex h-12 w-12 items-center justify-center
+    rounded-full
+    bg-gradient-to-br
+    from-[#f58529]
+    via-[#dd2a7b]
+    to-[#8134af]
+    shadow-[0_18px_40px_rgba(221,42,123,0.35)]
+    transition-all duration-300
+    hover:scale-110
+  "
+      >
+        <FaInstagram className="h-6 w-6 text-white" />
+      </a>
       <a
         href={smsUrl}
         aria-label="Send iMessage"
@@ -23,6 +42,7 @@ export default function FloatingActions() {
           transition-all duration-300
           hover:scale-110
           hover:bg-[#0066e6]
+          md:hidden
         "
       >
         <MessageCircle className="h-6 w-6 text-white" />
@@ -41,7 +61,7 @@ export default function FloatingActions() {
           hover:scale-110
           hover:bg-[rgba(123,77,40,0.95)]"
       >
-        <Phone className="h-6 w-6" color="white"/>
+        <Phone className="h-6 w-6" color="white" />
       </a>
     </div>
   );

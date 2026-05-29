@@ -24,7 +24,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4" />
                 {site.phoneDisplay}
               </a>
-              <a href={`sms:${site.phoneRaw}`} className="inline-flex items-center gap-2 text-[var(--text)] transition hover:text-[var(--accent)]">
+              <a href={`sms:${site.phoneRaw}`} className="inline-flex items-center gap-2 text-[var(--text)] transition hover:text-[var(--accent)] md:hidden">
                 <MessageCircle className="h-4 w-4" />
                 <span>iMessage</span>
               </a>
@@ -68,7 +68,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[var(--border)] mt-12 pt-8 text-center text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-          © {new Date().getFullYear()} Funblock Photobooth. Premium event photography experiences.
+          ©{" "}
+          <span suppressHydrationWarning>
+            {new Date().getFullYear()}
+          </span>{" "}
+          Funblock Photobooth. Premium event photography experiences.
         </div>
       </div>
     </footer>

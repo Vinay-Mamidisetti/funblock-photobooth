@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/constants/site";
 import { FaWhatsapp } from "react-icons/fa";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
@@ -16,8 +16,43 @@ type Errors = {
   budget?: string;
 };
 
+const MIN_BUDGET = 180;
+
+function parseBudgetAmount(value: string): number | null {
+  const numbers = value.match(/\d+(?:\.\d+)?/g);
+  if (!numbers?.length) return null;
+  return Math.min(...numbers.map((n) => Number(n)));
+}
+
+function formatDateLocal(date: Date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function todayLocalString() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return formatDateLocal(today);
+}
+
+function RequiredMark() {
+  return (
+    <span className="text-[var(--accent)]" aria-hidden="true">
+      {" "}
+      *
+    </span>
+  );
+}
+
 export default function ContactForm() {
   const [errors, setErrors] = useState<Errors>({});
+  const [minEventDate, setMinEventDate] = useState<string | undefined>();
+
+  useEffect(() => {
+    setMinEventDate(todayLocalString());
+  }, []);
 
   const clearError = (field: keyof Errors) => {
     setErrors((prev) => ({
@@ -57,15 +92,8 @@ export default function ContactForm() {
     // Event Date
     if (!eventDate) {
       newErrors.eventDate = "Please select event date";
-    } else {
-      const selectedDate = new Date(eventDate);
-      const today = new Date();
-
-      today.setHours(0, 0, 0, 0);
-
-      if (selectedDate < today) {
-        newErrors.eventDate = "Past dates are not allowed";
-      }
+    } else if (eventDate < todayLocalString()) {
+      newErrors.eventDate = "Past dates are not allowed";
     }
 
     // Event Location
@@ -88,6 +116,13 @@ export default function ContactForm() {
     // Budget
     if (!budget) {
       newErrors.budget = "Please enter your budget";
+    } else {
+      const amount = parseBudgetAmount(budget);
+      if (amount === null || Number.isNaN(amount)) {
+        newErrors.budget = "Please enter a valid budget amount";
+      } else if (amount < MIN_BUDGET) {
+        newErrors.budget = "Minimum budget is $180";
+      }
     }
 
     return newErrors;
@@ -155,6 +190,7 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Your Name
+            <RequiredMark />
           </span>
 
           <input
@@ -181,6 +217,7 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Phone Number
+            <RequiredMark />
           </span>
 
           <input
@@ -212,12 +249,13 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Event Date
+            <RequiredMark />
           </span>
 
           <input
             name="eventDate"
             type="date"
-            min={new Date().toISOString().split("T")[0]}
+            min={minEventDate}
             onChange={() => clearError("eventDate")}
             className={`mt-1 h-10 w-full rounded-[1.5rem] border px-5 text-[var(--text)] outline-none transition bg-[var(--surface)]
             ${
@@ -238,6 +276,7 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Event Location
+            <RequiredMark />
           </span>
 
           <input
@@ -268,6 +307,7 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Booth Type
+            <RequiredMark />
           </span>
 
           <select
@@ -290,6 +330,12 @@ ${formData.get("message")}
             <option value="360 Booth">
               360 Booth
             </option>
+            <option value="Glam Booth">
+              Glam Booth
+            </option>
+            <option value="DSLR Booth">
+              DSLR Booth
+            </option>
           </select>
 
           {errors.boothType && (
@@ -303,6 +349,7 @@ ${formData.get("message")}
         <label className="block">
           <span className="text-sm font-medium text-[var(--muted)]">
             Hours Needed
+            <RequiredMark />
           </span>
 
           <input
@@ -331,12 +378,13 @@ ${formData.get("message")}
       <label className="block">
         <span className="text-sm font-medium text-[var(--muted)]">
           What is your budget?
+          <RequiredMark />
         </span>
 
         <input
           name="budget"
           type="text"
-          placeholder="Ex: $300-$500"
+          placeholder="Ex: $300-$500 (min $180)"
           onChange={() => clearError("budget")}
           className={`mt-1 h-10 w-full rounded-[1.5rem] border px-5 text-[var(--text)] outline-none transition bg-[var(--surface)]
           ${
@@ -382,7 +430,9 @@ ${formData.get("message")}
         </p>
 
         <p className="mt-1 text-xs text-[var(--muted)]">
-          Fill the form and contact us via WhatsApp or Message. Need an immediate response? Call us directly.
+          Fill the form and contact us via WhatsApp
+          <span className="md:hidden"> or Message</span>. Need an immediate
+          response? Call us directly.
         </p>
       </div>
 
@@ -409,7 +459,6 @@ ${formData.get("message")}
     WhatsApp
   </button>
 
-  {/* Message */}
   <button
     type="button"
     onClick={() => handleQuickContact("sms")}
@@ -423,6 +472,7 @@ ${formData.get("message")}
       shadow-[0_14px_40px_-20px_rgba(0,122,255,0.30)]
       transition-all duration-300
       hover:bg-[#0066e6]
+      md:hidden
     "
   >
     <HiOutlineChatBubbleLeftRight className="h-5 w-5 text-white" />

@@ -82,15 +82,15 @@ export default function Gallery({
             modules={[Autoplay, FreeMode]}
             loop={true}
             freeMode={true}
-            grabCursor={false}
-            allowTouchMove={false}
-            simulateTouch={false}
+            grabCursor={true}
+            allowTouchMove={true}
+            simulateTouch={true}
             touchStartPreventDefault={false}
             speed={2500}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
-              pauseOnMouseEnter: false,
+              pauseOnMouseEnter: true,
             }}
             slidesPerView={"auto"}
             spaceBetween={18}

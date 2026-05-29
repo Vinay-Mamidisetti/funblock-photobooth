@@ -15,7 +15,7 @@ export default function LandingPageTemplate({
   showHowItWorks = true,
 }: LandingPageTemplateProps) {
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <Hero />
       <Services />
       {showHowItWorks && <HowItWorks />}
@@ -24,6 +24,6 @@ export default function LandingPageTemplate({
       <Testimonials />
       <Experiences />
       <Contact />
-    </main>
+    </div>
   );
 }

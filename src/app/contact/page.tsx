@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-[var(--background)] text-[var(--text)] pt-10">
+    <div className="bg-[var(--background)] text-[var(--text)] pt-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Contact"
@@ -17,6 +17,6 @@ export default function ContactPage() {
         />
       </div>
       <Contact showHeading={false} />
-    </main>
+    </div>
   );
 }

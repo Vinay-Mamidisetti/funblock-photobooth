@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="bg-[var(--background)] text-[var(--text)]">
+    <div className="bg-[var(--background)] text-[var(--text)]">
       <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
         <SectionHeading
           eyebrow="Gallery"
@@ -17,6 +17,6 @@ export default function GalleryPage() {
         />
       </div>
       <Gallery showHeading={false} />
-    </main>
+    </div>
   );
 }

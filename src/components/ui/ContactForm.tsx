@@ -184,7 +184,7 @@ ${formData.get("message")}
       className="space-y-4"
     >
       {/* Name & Phone */}
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
 
         {/* Name */}
         <label className="block">
@@ -243,7 +243,7 @@ ${formData.get("message")}
       </div>
 
       {/* Event Date & Location */}
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
 
         {/* Event Date */}
         <label className="block">
@@ -301,7 +301,7 @@ ${formData.get("message")}
       </div>
 
       {/* Booth Type & Hours */}
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
 
         {/* Booth Type */}
         <label className="block">
